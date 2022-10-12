@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:stylish/constants.dart';
+import 'package:stylish/l10n/localization.dart';
 import 'package:stylish/models/Product.dart';
 
 import 'components/color_dot.dart';
@@ -66,14 +67,14 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.symmetric(vertical: defaultPadding),
                     child: Text(
-                      "A Henley shirt is a collarless pullover shirt, by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2–5 buttons.",
+                      Localization.of(context)!.henley_description,
                     ),
                   ),
                   Text(
-                    "Colors",
+                    Localization.of(context)!.colors,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                   const SizedBox(height: defaultPadding / 2),
@@ -101,9 +102,9 @@ class DetailsScreen extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                            primary: primaryColor,
+                            backgroundColor: primaryColor,
                             shape: const StadiumBorder()),
-                        child: const Text("Add to Cart"),
+                        child: Text(Localization.of(context)!.add_to_cart),
                       ),
                     ),
                   )

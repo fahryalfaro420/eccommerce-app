@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:stylish/l10n/localization.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import 'package:stylish/constants.dart';
 
 
 const OutlineInputBorder outlineInputBorder = OutlineInputBorder(
@@ -22,7 +23,7 @@ class SearchForm extends StatelessWidget {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
-          hintText: "Search items...",
+          hintText: Localization.of(context)!.search_items,
           border: outlineInputBorder,
           enabledBorder: outlineInputBorder,
           focusedBorder: outlineInputBorder,
@@ -39,7 +40,7 @@ class SearchForm extends StatelessWidget {
               height: 48,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: primaryColor,
+                  backgroundColor: primaryColor,
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),

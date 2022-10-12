@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stylish/constants.dart';
+import 'package:stylish/l10n/localization.dart';
 import 'package:stylish/screens/home/home_screen.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,16 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.black54),
         ),
       ),
+      localizationsDelegates: const [
+        ECommerceLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('de'),
+      ],
       home: const HomeScreen(),
     );
   }

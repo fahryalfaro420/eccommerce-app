@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:stylish/l10n/localization.dart';
 import 'package:stylish/models/Product.dart';
 import 'package:stylish/screens/details/details_screen.dart';
 
-import '../../../constants.dart';
+import 'package:stylish/constants.dart';
 import 'product_card.dart';
 import 'section_title.dart';
 
@@ -13,12 +14,13 @@ class NewArrivalProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Product> demo_product = get_demo_product(context);
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: SectionTitle(
-            title: "New Arrival",
+            title: Localization.of(context)!.new_arrival,
             pressSeeAll: () {},
           ),
         ),

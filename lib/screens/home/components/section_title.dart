@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylish/l10n/localization.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -23,8 +24,8 @@ class SectionTitle extends StatelessWidget {
         ),
         TextButton(
           onPressed: pressSeeAll,
-          child: const Text(
-            "See All",
+          child: Text(
+            Localization.of(context)!.see_all,
             style: TextStyle(color: Colors.black54),
           ),
         )

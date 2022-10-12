@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stylish/constants.dart';
+import 'package:stylish/l10n/localization.dart';
 
 import 'components/categories.dart';
 import 'components/new_arrival_products.dart';
@@ -44,14 +45,14 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Explore",
+              Localization.of(context)!.explore,
               style: Theme.of(context)
                   .textTheme
                   .headline4!
                   .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
             ),
-            const Text(
-              "best Outfits for you",
+            Text(
+              Localization.of(context)!.best_outfits,
               style: TextStyle(fontSize: 18),
             ),
             const Padding(
