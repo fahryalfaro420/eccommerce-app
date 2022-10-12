@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import 'package:stylish/constants.dart';
 
 class ColorDot extends StatelessWidget {
   const ColorDot({

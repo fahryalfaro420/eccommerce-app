@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stylish/models/Category.dart';
 
-import '../../../constants.dart';
+import 'package:stylish/constants.dart';
 
 class Categories extends StatelessWidget {
   const Categories({
@@ -11,6 +11,7 @@ class Categories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Category> demo_categories = get_demo_categories(context);
     return SizedBox(
       height: 84,
       child: ListView.separated(

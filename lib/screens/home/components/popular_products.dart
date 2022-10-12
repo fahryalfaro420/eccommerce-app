@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:stylish/constants.dart';
+import 'package:stylish/l10n/localization.dart';
 import 'package:stylish/models/Product.dart';
 
-import '../../../constants.dart';
 import 'product_card.dart';
 import 'section_title.dart';
 
@@ -12,12 +13,13 @@ class PopularProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Product> demo_product = get_demo_product(context);
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: SectionTitle(
-            title: "Popular",
+            title: Localization.of(context)!.popular,
             pressSeeAll: () {},
           ),
         ),
